@@ -1,0 +1,22 @@
+{
+  "100": {
+    "name": "Vlad",
+    "telefon": "0713234523",
+    "oras": "Bucharest"
+  },
+  "101": {
+    "name": "Bogdan",
+    "telefon": "0713234529",
+    "oras": "Bucharest"
+  },
+  "102": {
+    "name": "Alexandra",
+    "telefon": "0713234526",
+    "oras": "Bucharest"
+  },
+  "103": {
+    "name": "David",
+    "telefon": "0713234525",
+    "oras": "Bucharest"
+  }
+}
