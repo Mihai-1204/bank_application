@@ -14,7 +14,7 @@ ENDC = '\033[0m'
 BOLD = '\033[1m'
 UNDERLINE = '\033[4m'
 
-
+# Here I changed colors
 USER_MENU = f"""
 {ENDC}{BOLD}1.{ENDC} Sa ceara bank statement -> valoare contului
 {WARNING}{BOLD}2.{ENDC} Sa transfere unui alt utilizator
@@ -133,6 +133,7 @@ def get_username_by_phone(phone_number: str, clients_path: str = "clients.json")
     return None
 
 
+# Here I did case 3
 def withdraw_money(user: str,amount: int, bank_path: str = "bank.json" ):
     with open(bank_path, "r") as f:
         accounts = json.loads(f.read())
@@ -146,7 +147,7 @@ def withdraw_money(user: str,amount: int, bank_path: str = "bank.json" ):
     else:
         print("Fonduri insuficiente pentru retragere.")
 
-
+# Here I did case 4
 def deposit_money(user: str, amount: int, bank_path: str = "bank.json"):
     with open(bank_path, "r") as f:
         accounts = json.loads(f.read())
@@ -182,10 +183,11 @@ if __name__ == '__main__':
                     if receiver_id:
                         transfer_money(username, receiver_id, amount)
 
-
+                # Updated case 3
                 case "3":
                     amount = int(input("Citeste suma de bani pe care doresti sa o retragi: "))
                     withdraw_money(username, amount)
+                # Updated case 4
                 case "4":
                     amount = int(input("Citeste suma de bani pe care doresti sa o depui: "))
                     deposit_money(username, amount)
