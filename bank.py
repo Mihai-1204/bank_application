@@ -3,7 +3,7 @@ import os
 import time
 
 import admin_operation
-
+from admin_operation import add_new_client
 
 OKBLUE = '\033[94m'
 OKCYAN = '\033[96m'
@@ -212,9 +212,9 @@ if __name__ == '__main__':
                 case "1":
                     user_to_delete = input("Ce user doresti sa stergi? ")
                     admin_operation.remove_user(user_to_delete)
-
+                # Updated case 2
                 case "2":
-                    pass
+                    add_new_client()
                 case "3":
                     username = input("Citeste un nou user: ")
                     username = login(username)
